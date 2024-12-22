@@ -5,13 +5,21 @@ class CensorInfo(models.Model):
     rating=models.CharField(max_length=10,null=True)
     cirtified_by=models.CharField(max_length=200,null=True)
     
+    def __str__(self):
+        return self.cirtified_by
 
 
 class Director(models.Model):
     name=models.CharField(max_length=250)
+    
+    def __str__(self):
+        return self.name
 
 class Actor(models.Model):
     name=models.CharField(max_length=250)
+    
+    def __str__(self):
+        return self.name
     
 
 
