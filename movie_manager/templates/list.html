@@ -3,7 +3,13 @@
 
 
 {% block content %}
-<h1>LIst</h1>
+{% for i in recent_movies %}
+<p>{{ i.title }}</p>
+{% endfor %}
+
+
+
+<h1>LIst {{ visits }} times visited...</h1>
 <table>
     <tr><th>title</th><th>Description</th><th>year</th><th>edit/delete</th></tr>
 {% for i in movies %}
